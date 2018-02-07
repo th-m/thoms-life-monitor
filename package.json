@@ -1,0 +1,29 @@
+{
+  "name": "vue_1",
+  "version": "1.0.0",
+  "description": "learning vue",
+  "main": "._vue.js",
+  "dependencies": {
+    "body-parser": "^1.18.2",
+    "cors": "^2.8.4",
+    "express": "^4.16.2",
+    "mongodb": "^3.0.2",
+    "mongoose": "^5.0.3",
+    "querystring": "^0.2.0"
+  },
+  "scripts": {
+    "test": "echo \"hello\"",
+    "start": "node server.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dsu-cit-csweb4200/s18-vuejs-th-m.git"
+  },
+  "bugs": {
+    "url": "https://github.com/dsu-cit-csweb4200/s18-vuejs-th-m/issues"
+  },
+  "homepage": "https://github.com/dsu-cit-csweb4200/s18-vuejs-th-m#readme"
+}
