@@ -1,4 +1,4 @@
-# s18-vuejs-th-m
+# s18-project1-th-m
 
 This is the first ever social media site where you can add friends without them having to actually exist!
 
