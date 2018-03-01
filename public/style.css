@@ -1,0 +1,109 @@
+*{
+  transition: all .5s;
+  font-family: 'Krona One', sans-serif;
+}
+
+h1,h2,h3,h4,h5,h6 {
+  text-align: center;
+}
+
+body{
+  margin: 0;
+}
+
+#header{
+  text-align: center;
+}
+
+#header h1{
+  margin-bottom: 0;
+}
+.character_container{
+  width: 90%;
+  margin: auto;
+  /* display: grid;
+  grid-template-columns: 1fr; */
+}
+
+.character{
+  display: grid;
+  grid-template-columns: 110px 1fr;
+}
+.character .stats{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  text-align: center;
+
+}
+
+.health_bar{
+  margin-top: 40px; 
+  display: block;
+  height: 20px;
+  border: 2px solid #111;
+  border-radius: 10px;
+  overflow: hidden;
+} 
+
+.health_bar .life{
+  width: 100%;
+  height: 100%;
+  background-color: red;
+}
+#dashboard{
+  text-align: center;
+}
+
+
+#dashboard hr{
+  width: 50%;
+  margin: auto;
+  
+}
+#dashboard input{
+  padding: 3px;
+  font-size: 18px;
+  margin: auto;
+  display: block;
+  text-align: center;
+  border: 2px solid black;
+  border-radius: 22px;
+}
+.canvas{
+  width: 90%;
+  margin: auto;
+}
+
+.viewContainer{
+  position: relative;
+  width: 90%;
+  margin: auto;
+  max-width: 800px;
+  /* height: 500px; */
+}
+.viewContainer canvas{
+  margin: auto;
+  max-width: 700px;
+  max-height: 500px;
+}
+
+.two_colm{
+  /* position: relative; */
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+.log_note textarea{
+  border-radius: 8px;
+  border: 2px solid black;
+  width: 100%;
+  margin-top: 40px;
+  height: 400px;
+  font-size: 1.2em;
+}
+.log_note button{
+  padding: 10px;
+  font-size: 1.3em;
+}
+.fifty{
+  /* width: 50%; */
+}
