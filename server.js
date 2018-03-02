@@ -121,4 +121,5 @@ function handleError (req, res){
   res.status(404).json({'error':'you hit a bad path'});
 }
 
-app.listen(3000, () => console.log('Example app listening on port 3000!'));
+// app.set('port', process.env.PORT || 8080);
+app.listen(process.env.PORT || 8080, () => console.log('Example app listening on port 3000!'));
