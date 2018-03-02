@@ -107,3 +107,20 @@ body{
 .fifty{
   /* width: 50%; */
 }
+
+#error{
+  width: 200px;
+  border: 2px solid black;
+  border-radius: 10px;
+  padding: 15px;
+  background-color: rgba(255, 100, 100, 0.5);
+  position: absolute;
+  top:350px;
+  right: -250px;
+}
+
+
+.show{
+  right: 0px !important;
+}
+

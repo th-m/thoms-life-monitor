@@ -199,6 +199,7 @@ var app = new Vue({
       status: 'good',
       index: 1
     },
+    showError: false,
     logs: [],
     log:{},
     logNote: "",
@@ -329,11 +330,18 @@ var app = new Vue({
     },
     saveNote(){
       // console.log('hello', this.log);
-      this.log.notes = this.logNote;
-      // console.log('hello', this.log);
-      putRequest(this.log, function(e){
+      if(this.logNote.indexOf("bad") != -1){
+        app.showError = true;
+        setTimeout(function(){
+          app.showError = false;
+        },3000);
+      }else{
+        this.log.notes = this.logNote;
+        // console.log('hello', this.log);
+        putRequest(this.log, function(e){
         console.log('sup fool', e);
       });
+    }
       // console.log()
     },
     updateLog(){

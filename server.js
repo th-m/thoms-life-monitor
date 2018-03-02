@@ -62,7 +62,6 @@ const getProductivity = function (){
 // NOTE ROUTES 
 // POST
 function handlePost(req, res){
-  console.log('date:', formatDate(day(-1)));
   return Promise.all([getProjects, getProductivity]).then(function(values) {
     let log ={
       date: formatDate(day(-1)),
