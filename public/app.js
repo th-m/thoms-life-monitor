@@ -370,7 +370,7 @@ var app = new Vue({
         app.changedDate();
       }, 1000);
     });
-    setInterval(runSprite, 100);
+    setInterval(runSprite, 130);
   }
 });
 
