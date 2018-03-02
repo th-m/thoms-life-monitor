@@ -16,7 +16,7 @@ function validateDate(strDate) {
   });
   return !t;
 }
-
+app.use(express.static('public'));
 app.use(cors({origin: '*'}));
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
@@ -122,7 +122,9 @@ function handleError (req, res){
 }
 
 
-app.use("/public", express.static(__dirname + '/public'));
+
+// app.use(express.static('public'));
+// app.use("/public", express.static(__dirname + '/public'));
 // app.use(Express.static(path.join(__dirname, '../public')));
 
 // handle every other route with index.html, which will contain
@@ -130,6 +132,5 @@ app.use("/public", express.static(__dirname + '/public'));
 // app.get('/', function (request, response){
 //     response.sendFile(path.resolve(__dirname, '../public', 'index.html'));
 // });
-// app.use(express.static('public'));
 // app.set('port', process.env.PORT || 8080);
 app.listen(process.env.PORT || 8080, () => console.log('Example app listening on port 3000!'));
