@@ -21,7 +21,7 @@ app.use(cors({origin: '*'}));
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 
-// app.get('/', (req, res) => handleRoot(req, res));
+app.get('/', (req, res) => handleRoot(req, res));
 app.get('/logs', (req, res) => handleGet(req, res));
 app.get('/logs/:id', (req, res) => handleGetId(req, res));
 app.post('/logs', (req, res) => handlePost(req, res));
@@ -122,13 +122,14 @@ function handleError (req, res){
 }
 
 
-app.use(Express.static(path.join(__dirname, '../public')));
+app.use("/public", express.static(__dirname + '/public'));
+// app.use(Express.static(path.join(__dirname, '../public')));
 
 // handle every other route with index.html, which will contain
 // a script tag to your application's JavaScript file(s).
-app.get('/', function (request, response){
-    response.sendFile(path.resolve(__dirname, '../public', 'index.html'));
-});
+// app.get('/', function (request, response){
+//     response.sendFile(path.resolve(__dirname, '../public', 'index.html'));
+// });
 // app.use(express.static('public'));
 // app.set('port', process.env.PORT || 8080);
 app.listen(process.env.PORT || 8080, () => console.log('Example app listening on port 3000!'));

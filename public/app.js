@@ -5,7 +5,7 @@ const day = ( x => {
 const padDate = (x => (x.toString().length <= 1? '0'+ x : x));
 const format = (x => formatDate(new Date(x)));
 const formatDate =  (fd => padDate(fd.getUTCMonth() + 1)+'/'+padDate(fd.getUTCDate())+'/'+fd.getUTCFullYear()+' 00:00');
-const serverUrl = 'http://localhost:3000/logs';
+const serverUrl = 'http://localhost:8080/logs';
 
 var c, ctx, weeklyChart; 
 var c2, ctx2, dailyChart; 
