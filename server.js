@@ -121,6 +121,14 @@ function handleError (req, res){
   res.status(404).json({'error':'you hit a bad path'});
 }
 
-app.use(express.static('public'));
+
+app.use(Express.static(path.join(__dirname, '../public')));
+
+// handle every other route with index.html, which will contain
+// a script tag to your application's JavaScript file(s).
+app.get('/', function (request, response){
+    response.sendFile(path.resolve(__dirname, '../public', 'index.html'));
+});
+// app.use(express.static('public'));
 // app.set('port', process.env.PORT || 8080);
 app.listen(process.env.PORT || 8080, () => console.log('Example app listening on port 3000!'));
