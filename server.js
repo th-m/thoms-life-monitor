@@ -21,7 +21,7 @@ app.use(cors({origin: '*'}));
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 
-app.get('/', (req, res) => handleRoot(req, res));
+// app.get('/', (req, res) => handleRoot(req, res));
 app.get('/logs', (req, res) => handleGet(req, res));
 app.get('/logs/:id', (req, res) => handleGetId(req, res));
 app.post('/logs', (req, res) => handlePost(req, res));
