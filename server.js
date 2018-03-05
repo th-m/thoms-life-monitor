@@ -72,8 +72,15 @@ function handlePost(req, res){
       res.set('Access-Control-Allow-Origin', '*');
       res.status(201).json({'success':'updated logs', 'log':log});
     }, function(err){
-      res.set('Access-Control-Allow-Origin', '*');
-      res.status(500).json(err);
+      if (err.errors){
+        var messages = {};
+        for (var e in err.errors){
+          messages[e] = err.errors[e].message;
+        }
+        res.status(422).json(messages);
+      }else{
+        res.stats(500).json({error:"internal server error"});
+      }
     });
   });
 }

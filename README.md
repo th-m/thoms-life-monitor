@@ -16,7 +16,7 @@ I have developed an addiction for data... This is my way of trying to validate m
 ```
 /logs
 ```
-get a list of all friends.
+get a list of all log entrys.
 
 ```
 /logs/:id
